@@ -1,0 +1,48 @@
+flowchart TD
+    subgraph Setup
+        A[Inizializzazione del simulatore] --> B[Definizione area anatomica target]
+        B --> C[Configurazione iniziale dei magneti]
+    end
+    
+    subgraph Ottimizzazione
+        C --> D[Calcolo del campo magnetico iniziale]
+        D --> E[Ottimizzazione delle frequenze per\ninterferenza ottimale nell'area target]
+        E --> F[Ottimizzazione delle ampiezze\nper uniformità del campo]
+        F --> G[Ottimizzazione delle posizioni\ndei sensori per il rilevamento]
+        G --> H[Ottimizzazione delle posizioni\ndei magneti]
+    end
+    
+    subgraph Analisi
+        H --> I[Ricalcolo campo magnetico ottimizzato]
+        I --> J[Simulazione interazione con i tessuti]
+        J --> K[Analisi del segnale rilevato dai sensori]
+        K --> L[Ricostruzione immagine/informazione]
+    end
+    
+    subgraph Validazione
+        L --> M[Valutazione della qualità\ndel risultato]
+        M --> N{Risultato\nsoddisfacente?}
+        N -->|No| O[Modifica parametri]
+        O --> D
+        N -->|Sì| P[Report finale]
+    end
+    
+    style A fill:#d4f1f9,stroke:#333,stroke-width:1px
+    style B fill:#d4f1f9,stroke:#333,stroke-width:1px
+    style C fill:#d4f1f9,stroke:#333,stroke-width:1px
+    
+    style D fill:#e2f0cb,stroke:#333,stroke-width:1px
+    style E fill:#e2f0cb,stroke:#333,stroke-width:1px
+    style F fill:#e2f0cb,stroke:#333,stroke-width:1px
+    style G fill:#e2f0cb,stroke:#333,stroke-width:1px
+    style H fill:#e2f0cb,stroke:#333,stroke-width:1px
+    
+    style I fill:#ffd8b1,stroke:#333,stroke-width:1px
+    style J fill:#ffd8b1,stroke:#333,stroke-width:1px
+    style K fill:#ffd8b1,stroke:#333,stroke-width:1px
+    style L fill:#ffd8b1,stroke:#333,stroke-width:1px
+    
+    style M fill:#fcbad3,stroke:#333,stroke-width:1px
+    style N fill:#fcbad3,stroke:#333,stroke-width:1px
+    style O fill:#fcbad3,stroke:#333,stroke-width:1px
+    style P fill:#fcbad3,stroke:#333,stroke-width:1px
