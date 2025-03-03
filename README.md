@@ -1,0 +1,2 @@
+# magnetic-scanner
+Testing simulations
